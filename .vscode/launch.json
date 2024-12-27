@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Compiled Program",
+            "type": "node",  // Using a simple node-type configuration to run the program
+            "request": "launch",
+            "program": "${workspaceFolder}/compiled-raylib-game",  // Path to the compiled program
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": true,
+            "preLaunchTask": "Build with Clang",  // Ensures that the build task runs first
+            "runtimeExecutable": "/bin/bash",  // Use bash to run the program
+            "runtimeArgs": ["-c", "./compiled-raylib-game"]  // Executes the compiled program
+        }
+    ]
+}
